@@ -200,18 +200,18 @@ def main():
 	if(len(starting_state) == 9): 
 		result = temp_func( starting_state, goal_state,method )
 		if result == None:
-			print "No solution found"
+			print ("No solution found")
 		elif result == [None]:
-			print "Start node was the goal!"
+			print ("Start node was the goal!")
 		else:
 			file = open("output.txt","w")
 			file.write("path_to_goal:"+str(result[0])+"\n")
 			file.write("cost_of_path:"+ str(len(result[0]))+"\n")
 			file.write("search_depth:"+str(len(result[0]))+"\n")
 
-			print "Result is ",result
-			print len(result[0]), " moves"
-			print "Nodes expanded",result[1]
+			print ("Result is "),result
+			print (len)(result[0]), " moves"
+			print ("Nodes expanded"),result[1]
 	else:
 		print("Invalid input")
 
